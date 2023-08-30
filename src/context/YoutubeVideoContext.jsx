@@ -1,17 +1,14 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 export const YoutubeVideoContext = createContext();
 
 export function YoutubeVideoContextProvider({ children }) {
-  const [searchVideo, setSearchVideo] = useState("");
-
-  function updateSearchVideoValue(nameVideoSearch) {
-    setSearchVideo(nameVideoSearch);
-    console.log(searchVideo);
-  }
+  const searchVideo = (videoName) => {
+    alert(videoName);
+  };
 
   const contextValue = {
-    updateSearchVideoValue,
+    searchVideo,
   };
 
   return (

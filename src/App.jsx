@@ -2,7 +2,7 @@ import { SearchBar } from "./components/SearchBar";
 
 function App() {
   return (
-    <div>
+    <div className="container mx-auto p-10">
       <SearchBar />
     </div>
   );
