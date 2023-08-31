@@ -8,11 +8,12 @@ export function YoutubeVideoContextProvider({ children }) {
 
   const searchVideo = async (videoName) => {
     const videos = await getVideoList(videoName);
-    console.log(videos);
+    setVideoList(videos);
   };
 
   const contextValue = {
     searchVideo,
+    videoList
   };
 
   return (
