@@ -19,6 +19,7 @@ export function SearchBar() {
           onChange={handleValueVideoName}
         />
       </div>
+      
 
       <div className="m-1 flex-2">
         <button
@@ -33,6 +34,9 @@ export function SearchBar() {
           Search Video
         </button>
       </div>
+      
     </div>
+
+
   );
 }

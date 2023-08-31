@@ -4,8 +4,6 @@
 
 A simple YouTube search engine built with React. This project allows users to search for videos on YouTube and view the results directly within the application by consuming the [YouTube API](https://developers.google.com/youtube/v3?hl=es-419)
 
-**Note**: This project is still in the **development phase**.
-
 ## How to Use
 
 **Note**: You need an API Key provided by the [YouTube API](https://developers.google.com/youtube/v3?hl=es-419)

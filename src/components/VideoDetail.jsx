@@ -14,9 +14,13 @@ export function VideoDetail({ video }) {
           {" "}
           {video.channelTitle}
         </h4>
-        <p className="bg-red-700 text-xs text-white rounded-md font-bold pr-1 pl-1 inline-flex items-center">
-          {video.liveBroadcastContent && <MdWifiTethering className="mr-1" />}
-          LIVE
+        <p className="bg-red-700 text-xs text-white rounded-md font-bold pr-1 pl-1 inline-block">
+          {video.liveBroadcastContent && (
+            <span className="inline-flex items-center">
+              <MdWifiTethering className="mr-1" />
+              Live
+            </span>
+          )}
         </p>
       </div>
     </>

@@ -5,15 +5,19 @@ export const YoutubeVideoContext = createContext();
 
 export function YoutubeVideoContextProvider({ children }) {
   const [videoList, setVideoList] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState('')
 
   const searchVideo = async (videoName) => {
     const videos = await getVideoList(videoName);
     setVideoList(videos);
   };
 
+
   const contextValue = {
     searchVideo,
-    videoList
+    videoList,
+    setSelectedVideo,
+    selectedVideo
   };
 
   return (
