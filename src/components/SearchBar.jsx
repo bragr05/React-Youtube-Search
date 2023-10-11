@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { YoutubeVideoContext } from "../context/YoutubeVideoContext";
+import { FiSearch } from "react-icons/fi";
 
 export function SearchBar() {
   const { searchVideo } = useContext(YoutubeVideoContext);
@@ -11,32 +12,28 @@ export function SearchBar() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <div className="m-1 flex-1">
         <input
           type="text"
-          className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+          className="border rounded-md py-2 px-3 text-gray-700  focus:outline-none w-full"
           onChange={handleValueVideoName}
         />
       </div>
-      
 
-      <div className="m-1 flex-2">
+      <div>
         <button
           className={` ${
             videoName.length === 0 ? "bg-red-800" : "bg-red-700"
-          }  rounded-md px-3 py-1.5 text-white font-semibold hover:bg-red-800 w-full`}
+          }  rounded-md py-3 px-4 text-white font-semibold hover:bg-red-800 transition-all ease-out`}
           disabled={videoName.length === 0}
           onClick={() => {
             searchVideo(videoName);
           }}
         >
-          Search Video
+          <FiSearch />
         </button>
       </div>
-      
     </div>
-
-
   );
 }
