@@ -11,6 +11,7 @@ export function YoutubeVideoContextProvider({ children }) {
 
   const searchVideo = async (videoName) => {
     const videos = await getVideoList(videoName);
+    setSelectedVideo("");
     setVideoList(videos);
   };
 
